@@ -1,5 +1,7 @@
 .background {
-    background: linear-gradient(to right, white 5%, #508296 5%, #508296 40%, white 30%);
+    background: linear-gradient(to right, white 5%, #508296 5%, #508296 35%, white 30%);
+    width: 100%;
+    min-height: 100vh;
 }
 
 .container {
@@ -16,58 +18,74 @@
     border-radius: 8px;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
     width: 100%;
-    max-width: 900px;
+    max-width: 950px;
     min-height: 500px;
     overflow: hidden;
     position: relative;
-    /* Needed for absolute positioning */
 }
 
 .leftPanel {
     background-color: #508296;
-    width: 50%;
-    /* Adjusted to make space for the enlarged image */
+    width: 38%;
+    padding: 30px;
+    color: white;
 }
 
 .rightPanel {
-    padding: 30px;
-    width: 60%;
-    /* Adjusted to match the left panel */
+    padding: 30px 40px;
+    width: 62%;
+    background: white;
 }
 
-/* Enlarged Profile Image & Shifted Left */
+/* Image moved left and adjusted */
 .profileImage {
     position: absolute;
-    left: 30%;
-    /* Adjust this value to position the image horizontally */
+    left: 22%;
     top: 60%;
-    /* Adjust this value to move the image down */
     transform: translate(-50%, -50%);
-    width: 603px;
-    /* Full width of the image */
-    height: 527.6px;
-    /* Full height of the image */
+    width: 550px;
+    height: 480px;
     z-index: 10;
-    /* Ensure it's above the panels */
     object-fit: contain;
-    /* Ensures the image fits without distortion */
 }
 
+/* Cleaner field styling without separators */
 .field {
-    margin-bottom: 20px;
+    margin-bottom: 12px;
+    padding: 5px 0;
 }
 
 .field label {
     color: #888;
-    font-size: 14px;
-    margin-bottom: 8px;
+    font-size: 16px;
+    /* Increased from 14px */
+    margin-bottom: 3px;
     display: block;
+    font-weight: 500;
 }
 
 .field p {
     margin: 0;
-    font-size: 16px;
+    font-size: 18px;
+    /* Increased from 16px */
     color: #333;
-    font-weight: 500;
+    font-weight: 600;
+    line-height: 1.4;
 }
 
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 17px;
+    /* Added for sidebar text */
+}
+
+.sidebar-item input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.logout-item {
+    color: #ff5252;
+}
